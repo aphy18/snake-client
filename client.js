@@ -8,16 +8,20 @@ const connect = function () {
       console.log("We have connected!!");
     
     });
-
-
-  // interpret incoming data as text
+// interpret incoming data as text
   conn.setEncoding("utf8");
-  const name = "Aphason";
-  conn.on('connect',() => {
-    conn.write(`${name} has connected!`);
+  const name = "APH";
+  conn.on('connect', () => {
+    conn.write(`Name: ${name}`); // looks for colon
+    // setTimeout(() => {
+    //     conn.write("Move: up")
+    // }, 300)
+    // setTimeout(() => {
+    //     conn.write("Move: left")
+    // }, 600)
+    
   })
-  
-  
+ 
   return conn;
 }
 
